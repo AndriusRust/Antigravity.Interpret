@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lista 01 — Estruturas Condicionais</title>
+</head>
+
+<body>
+    <h1>JavaScript — Base Operacional (Lista 01)</h1>
+
+    <!-- Botões para escolher qual questão executar -->
+    <div id="menu-exercicios">
+        <button onclick="executar(exercicio01, 'Exercício 01')">Exercício 01</button>
+        <button onclick="executar(exercicio02, 'Exercício 02')">Exercício 02</button>
+        <button onclick="executar(exercicio03, 'Exercício 03')">Exercício 03</button>
+    </div>
+
+    <hr>
+
+    <!-- Área onde o resultado aparece na tela -->
+    <h2 id="titulo-exercicio">Selecione um exercício acima</h2>
+    <pre id="visor">Aguardando execução...</pre>
+
+    <!-- Importação dos arquivos de exercício -->
+    <script src="exercicio_01.js"></script>
+    <script src="exercicio_02.js"></script>
+    <script src="exercicio_03.js"></script>
+
+    <!-- Função ponte que conecta o botão ao visor -->
+    <script>
+        function executar(funcaoExercicio, nome) {
+            document.getElementById("titulo-exercicio").textContent = nome;
+            const saida = funcaoExercicio();
+            document.getElementById("visor").textContent = saida;
+        }
+    </script>
+</body>
+
+</html>
